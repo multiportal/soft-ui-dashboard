@@ -5004,7 +5004,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-nav .dropdown-menu {
-  position: static;
+  /*position: static;*/
 }
 
 .navbar-text {
@@ -7787,6 +7787,7 @@ fieldset:disabled .btn {
 
 .position-sticky {
   position: sticky !important;
+  z-index: 10;
 }
 
 .top-0 {
@@ -19692,8 +19693,8 @@ fieldset:disabled .btn {
   }
 
   .dropdown.nav-item .dropdown-menu {
-    background-color: transparent;
-    overflow: scroll;
+    /*background-color: transparent;
+    overflow: scroll;*/
   }
 
   .dropdown.nav-item .dropdown-menu-animation {
