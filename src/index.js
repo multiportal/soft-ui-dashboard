@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
+var colors = require('colors');
 const port = 4000;
 
-app.use(express.static('public'));
-//app.use('/static', express.static(__dirname + '/public'));
+colors.enable()
 
-app.get("/", (req, res) => {
-    res.send("hello world");
-});
+app.use(express.static('public'));
+
+app.get("/", (req, res) => {res.send("Root");});
 
 app.listen(port, () => {
-    console.log(`Server on port:${port}`);
+    console.log(`Server on port:${port}`.blue);
 });
