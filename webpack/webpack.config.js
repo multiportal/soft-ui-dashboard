@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -17,15 +17,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    /*new CopyPlugin({
+    new CopyPlugin({
       patterns: [
-        { from: 'src/assets/pwa/sw.js', to: 'sw.js' },
+        /*{ from: 'src/assets/pwa/sw.js', to: 'sw.js' },
         { from: 'src/assets/pwa/icon/apple-icon-152x152.png', to: 'icon/apple-icon-152x152.png' },
         { from: 'src/assets/pwa/icon/apple-icon-180x180.png', to: 'icon/apple-icon-180x180.png' },
         { from: 'src/assets/pwa/icon/', to: 'assets/pwa/icon/' },
-        { from: 'src/assets/img/', to: 'assets/img/' },
+        { from: 'src/assets/img/', to: 'assets/img/' },*/
+        { from: 'src/assets/', to: 'assets/' },
+        { from: 'src/media/', to: 'media/' },
+        { from: 'src/pages/', to: 'pages/' },
       ],
-    }),*/
+    }),
   ],
   module: {
     rules: [
